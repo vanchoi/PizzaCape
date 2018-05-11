@@ -1,0 +1,28 @@
+div{
+    margin:0px;
+    padding:0px;
+    background-color: blueviolet;
+}
+
+h2{
+    margin-left:20%; 
+}
+
+.formDelivery{
+    color:white;
+    font-size:1.4em;
+    margin:20px;
+    margin-left:530px;
+}
+
+.bill{
+    margin-top:100px;
+}
+
+.formBilling{
+    color:white;
+    font-size:1.4em;
+    margin:20px;
+    margin-left:530px;
+    
+}
