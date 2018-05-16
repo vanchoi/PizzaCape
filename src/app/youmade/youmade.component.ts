@@ -6,8 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./youmade.component.css']
 })
 export class YoumadeComponent implements OnInit {
+    allowButton = false;
 
-  constructor() { }
+  constructor() {
+    setTimeout(
+      () => {
+        this.allowButton = true;
+      }, 2500);
+   }
 
   ngOnInit() {
   }
