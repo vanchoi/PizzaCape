@@ -1,6 +1,48 @@
 <div class="container">
 
-  <button > See Our Menu</button>
-  <button > See Our Menu</button>
+  
+  <a routerLink = "/ourmenu"><button id="ourMenu">See Our Menu</button></a>
+  <a routerLink = ""><button class="buttonblue">Close</button></a>
+
+
+  <div class="row">
+    <div class="colLeft">
+      <h2>Ingredients: </h2>
+        <ol>
+          <li>Tomato sauce <span class="cena">  1$<input type="checkbox"></span> </li> 
+          <li class="line2">Fresh tomatoes <span class="cena">  1$<input type="checkbox"></span> </li>
+          <li>Fresh peppers <span class="cena">  1$<input type="checkbox"></span> </li>
+          <li class="line2">Mozzarella <span class="cena">  1$<input type="checkbox"></span> </li>
+          <li>Mushrooms <span class="cena">  1$<input type="checkbox"></span> </li>
+          <li class="line2">Ham <span class="cena">  1$<input type="checkbox"></span> </li>
+          <li>Bacon <span class="cena">  1$<input type="checkbox"></span> </li>
+        </ol>
+      
+    </div>
+    <div class="colRight">
+      <img src="../../assets/images/kapricioza.jpg" width="500" height="450" id="youmadePizza">
+  
+    <div>
+      Size:
+      <input type="radio" name="size"/>M
+      <input type="radio" name="size"/>L      
+    </div>
+    <div>
+      Quantity:
+      <input type="number" min="1" max="10" value="1" />
+    </div>
+    <div>
+    Price:
+    </div>
+    
+      <button >Add to Cart</button>
+   
+      </div>
+  </div>
+
+
+
+
+
 
 </div>
