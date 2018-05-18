@@ -47,4 +47,36 @@
     height: 500px;
 }
 
+.inputbutton{
+    margin-left: 70px;
+    margin-top: 16px;
+}
 
+.inputbutton2{
+    margin-left: 20px;
+    margin-top: 16px;
+}
+
+label{
+    position: absolute;
+}
+
+.buttons{
+    margin-left: 30px;
+    margin-top: 40px;
+}
+#btnAddToCart{
+    margin-right: 10px;
+}
+
+#btnEditPizza{
+    margin-left: 10px;
+}
+
+form{
+    background-color: wheat;
+}
+
+
+
+ 
