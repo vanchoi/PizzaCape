@@ -1,43 +1,76 @@
 <div class="container">
 
   
-  <a routerLink = "/ourmenu"><button id="ourMenu">See Our Menu</button></a>
-  <a routerLink = ""><button class="buttonblue">Close</button></a>
+  <a routerLink = "/ourmenu"><button id="ourMenuBtn">See Our Menu</button></a>
+  <a routerLink = ""><button class="btnClose">Close</button></a>
 
 
   <div class="row">
     <div class="colLeft">
       <h2>Ingredients: </h2>
         <ol>
-          <li>Tomato sauce <span class="cena">  1$<input type="checkbox"></span> </li> 
-          <li class="line2">Fresh tomatoes <span class="cena">  1$<input type="checkbox"></span> </li>
-          <li>Fresh peppers <span class="cena">  1$<input type="checkbox"></span> </li>
-          <li class="line2">Mozzarella <span class="cena">  1$<input type="checkbox"></span> </li>
-          <li>Mushrooms <span class="cena">  1$<input type="checkbox"></span> </li>
-          <li class="line2">Ham <span class="cena">  1$<input type="checkbox"></span> </li>
-          <li>Bacon <span class="cena">  1$<input type="checkbox"></span> </li>
+          <li>Tomato sauce <span class="cena">  1$ 
+            <button class="btnMinus" *ngIf="onMinusBtn()" [disabled]="!allowBtn" (click)="a=a-1">-</button>
+            {{ a }}
+            <button type="button" class="btnPlus" (click)="a=a+1" >+</button>  
+          </span> </li> 
+          <li class="line2">Fresh tomatoes <span class="cena">  1$ 
+            <button class="btnMinus" (click)="b=b-1">-</button>
+            {{ b }}
+            <button class="btnPlus" (click)="b=b+1">+</button>
+          </span> </li>
+          <li>Fresh peppers <span class="cena">  1$ 
+            <button class="btnMinus" (click)="c=c-1">-</button>
+            {{ c }}
+            <button class="btnPlus" (click)="c=c+1">+</button>
+          </span> </li>
+          <li class="line2">Mozzarella <span class="cena">  1$ 
+            <button class="btnMinus" (click)="d=d-1">-</button>
+            {{ d }}
+            <button class="btnPlus" (click)="d=d+1">+</button>
+          </span> </li>
+          <li>Mushrooms <span class="cena">  1$ 
+            <button class="btnMinus" (click)="e=e-1">-</button>
+            {{ e }}
+            <button class="btnPlus" (click)="e=e+1">+</button>
+          </span> </li>
+          <li class="line2">Ham <span class="cena">  1$ 
+            <button class="btnMinus" (click)="f=f-1">-</button>
+            {{ f }}
+            <button class="btnPlus" (click)="f=f+1">+</button>
+          </span> </li>
+          <li>Bacon <span class="cena">  1$ 
+            <button class="btnMinus" (click)="g=g-1">-</button>
+            {{ g }}
+            <button class="btnPlus" (click)="g=g+1">+</button>
+          </span> </li>
         </ol>
-      
     </div>
+
+
     <div class="colRight">
-      <img src="../../assets/images/kapricioza.jpg" width="500" height="450" id="youmadePizza">
+      <img src="../../assets/images/supreme.jpg"  width="700"  id="youmadePizza">
   
-    <div>
+    <div class="pizzaSize">
       Size:
       <input type="radio" name="size"/>M
-      <input type="radio" name="size"/>L      
+      <input type="radio" name="size"/>L     
+       <!-- Quantity:
+      <input type="number" min="1" max="10" value="1" />  -->
     </div>
-    <div>
+
+    <div class="pizzaQuantity">
       Quantity:
       <input type="number" min="1" max="10" value="1" />
     </div>
-    <div>
+
+    <div class="price">
     Price:
     </div>
     
-      <button >Add to Cart</button>
+      <button class="addCart"> Add to Cart </button>
    
-      </div>
+    </div>
   </div>
 
 
