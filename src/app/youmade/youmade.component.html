@@ -10,7 +10,7 @@
       <h2>Ingredients: </h2>
         <ol>
           <li>Tomato sauce <span class="cena">  1$ 
-            <button class="btnMinus" *ngIf="onMinusBtn()" [disabled]="!allowBtn" (click)="a=a-1">-</button>
+            <button class="btnMinus" (click)="a=a-1">-</button>
             {{ a }}
             <button type="button" class="btnPlus" (click)="a=a+1" >+</button>  
           </span> </li> 
