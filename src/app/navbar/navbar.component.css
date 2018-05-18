@@ -1,15 +1,12 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
-   
-}
-#backg{
-    position: absolute;
 }
 
 ul{
     list-style-type: none;
     padding-left: 950px;
     padding-top: 25px;
+    position: relative;
 }
 
 ul li{
@@ -27,7 +24,6 @@ a{
 }
 
 #home-buttons{
-    position: relative;
     margin-left: 380px;
     margin-top: 300px;
 }
@@ -53,7 +49,4 @@ button{
     width: 250px;
     margin: 30px;
 }
-
-
-
 
