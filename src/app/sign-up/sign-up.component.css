@@ -1,7 +1,7 @@
 * {box-sizing: border-box}
 
 /* Full-width input fields */
-  input[type=text], input[type=password] {
+  input[type=text], input[type=password], input[type=email] {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -21,7 +21,7 @@ hr {
 }
 
 /* Set a style for all buttons */
-button {
+ button {
   background-color: #4CAF50;
   color: white;
   padding: 14px 20px;
@@ -51,6 +51,10 @@ button:hover {
 /* Add padding to container elements */
 .container {
   padding: 16px;
+  border: 1px solid #BFBFBF;
+  border-radius: 5px;
+  width: 50%;
+  margin: auto;
 }
 
 /* Clear floats */
