@@ -1,0 +1,23 @@
+div{
+    margin-top: 70px;
+    margin-left: 450px;
+}
+
+input{
+    width: 370px;
+}
+
+p{
+    padding: -10px;
+}
+
+#btnsend{
+    margin-top: 140px;
+    margin-left: 100px;
+    position: absolute;
+    background-color: #2581bc;
+    padding: 5px;
+    color: white;
+    border-radius: 5px;
+    width: 150px;
+}
