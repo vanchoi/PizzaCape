@@ -11,7 +11,7 @@ import { OurmenuComponent } from './ourmenu/ourmenu.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { NavbarComponent } from './navbar/navbar.component';
-
+import { IngredientsComponent } from './youmade/ingredients/ingredients.component'
 
 
 
@@ -26,7 +26,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     OurmenuComponent,
     ContactComponent,
     AboutComponent,
-    NavbarComponent
+    NavbarComponent,
+    IngredientsComponent
   ],
   imports: [
     BrowserModule,
