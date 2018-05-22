@@ -1,52 +1,11 @@
 <h2>Ingredients: </h2>
-        <ol>
-         
-            <li>PROBA <span class="cena">  1$ 
-                <button [disabled]="!disabledBtn" class="btnMinus" (click)="a=a-1"
-                                
-                >-</button> 
-                {{ a }}
-                <button type="button" class="btnPlus" (click)="a=a+1" >+</button>  
-              </span> </li>
-         
-         
-         
-         
-         
-         
-          <li>Tomato sauce <span class="cena">  1$ 
-            <button class="btnMinus" (click)="a=a-1">-</button>
-            {{ a }}
-            <button type="button" class="btnPlus" (click)="a=a+1" >+</button>  
-          </span> </li> 
-          <li class="line2">Fresh tomatoes <span class="cena">  1$ 
-            <button class="btnMinus" (click)="b=b-1">-</button>
-            {{ b }}
-            <button class="btnPlus" (click)="b=b+1">+</button>
-          </span> </li>
-          <li>Fresh peppers <span class="cena">  1$ 
-            <button class="btnMinus" (click)="c=c-1">-</button>
-            {{ c }}
-            <button class="btnPlus" (click)="c=c+1">+</button>
-          </span> </li>
-          <li class="line2">Mozzarella <span class="cena">  1$ 
-            <button class="btnMinus" (click)="d=d-1">-</button>
-            {{ d }}
-            <button class="btnPlus" (click)="d=d+1">+</button>
-          </span> </li>
-          <li>Mushrooms <span class="cena">  1$ 
-            <button class="btnMinus" (click)="e=e-1">-</button>
-            {{ e }}
-            <button class="btnPlus" (click)="e=e+1">+</button>
-          </span> </li>
-          <li class="line2">Ham <span class="cena">  1$ 
-            <button class="btnMinus" (click)="f=f-1">-</button>
-            {{ f }}
-            <button class="btnPlus" (click)="f=f+1">+</button>
-          </span> </li>
-          <li>Bacon <span class="cena">  1$ 
-            <button class="btnMinus" (click)="g=g-1">-</button>
-            {{ g }}
-            <button class="btnPlus" (click)="g=g+1">+</button>
-          </span> </li>
-        </ol>
+<ol>
+  <li *ngFor="let ingredient of ingredients; let i = index;" [ngClass]="{'line2': i % 2 === 1}">
+    {{ ingredient.name }}
+    <span class="cena"> {{ ingredient.singlePrice * ingredient.amount }}$
+      <button class="btnMinus" (click)="ingredient.decrease()">-</button>
+        {{ ingredient.amount }}
+      <button type="button" class="btnPlus" (click)="ingredient.increase()">+</button>
+    </span>
+  </li>
+</ol>

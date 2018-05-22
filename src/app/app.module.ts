@@ -11,7 +11,11 @@ import { OurmenuComponent } from './ourmenu/ourmenu.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { IngredientsComponent } from './youmade/ingredients/ingredients.component'
+import { IngredientsComponent } from './youmade/ingredients/ingredients.component';
+import { CartComponent } from './cart/cart.component';
+import { ProductsListComponent } from './products-list/products-list.component';
+import { ProductsEditComponent } from './products-list/products-edit/products-edit.component';
+
 
 
 
@@ -27,7 +31,11 @@ import { IngredientsComponent } from './youmade/ingredients/ingredients.componen
     ContactComponent,
     AboutComponent,
     NavbarComponent,
-    IngredientsComponent
+    IngredientsComponent,
+    CartComponent,
+    ProductsListComponent,
+    ProductsEditComponent
+    
   ],
   imports: [
     BrowserModule,
