@@ -1,17 +1,13 @@
-<p>
-  products-list works!
-</p>
-
-
 <app-navbar></app-navbar>
 
+
 <div class="row">
-  <div class="col-xs-10">
+  <div class="col-xs-4">
     <ul>
       <a class="" style="cursor: pointer;"
       *ngFor="let ingredient of ingredients"
       >
-        {{ ingredient.name }} ({{ ingredient.amount }}) <br>
+        {{ ingredient.name }} {{ ingredient.amount }} grams <br>
       </a>
     </ul>
   </div>
