@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Ingredient } from 'src/app/shared/ingredient.model';
 
 @Component({
@@ -6,7 +6,9 @@ import { Ingredient } from 'src/app/shared/ingredient.model';
     templateUrl:'./ingredients.component.html',
     styleUrls: ['./ingredients.component.css']
 })
-export class IngredientsComponent {    
+export class IngredientsComponent {  
+    @Output() price = new EventEmitter<number>();
+    
     ingredients: Ingredient[] = [
         new Ingredient('Tomato Sauce', 1, 0 ),
         new Ingredient('Fresh Tomato', 1.3, 0 ),
@@ -19,4 +21,12 @@ export class IngredientsComponent {
         new Ingredient('Bacon', 2, 0 ),
         new Ingredient('Oregano', 1, 0 )
     ];
+
+    sumAllIngredients() {
+        let total: number = 0;
+        this.ingredients.forEach((ingredient)=>{
+            total += ingredient.amount * ingredient.singlePrice;
+        });
+        this.price.emit(total);
+    }
 }

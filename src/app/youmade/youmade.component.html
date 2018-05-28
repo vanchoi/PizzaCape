@@ -7,7 +7,7 @@
 
   <div class="row">
     <div class="colLeft">
-        <app-ingredients></app-ingredients>
+        <app-ingredients (price)="onPriceChange($event)"></app-ingredients>
       
     </div>
 
@@ -29,7 +29,7 @@
     </div>
 
     <div class="price">
-    Price:
+    Price: {{totalPrice}}
     </div>
     
       <button class="addCart"> Add to Cart </button>
