@@ -1,4 +1,4 @@
-* {box-sizing: border-box}
+/* * {box-sizing: border-box}
 
 /* Full-width input fields */
   input[type=text], input[type=password], input[type=email] {
@@ -69,4 +69,11 @@ button:hover {
   .cancelbtn, .signupbtn {
     width: 100%;
   }
+}
+
+.container {
+  margin-top:30px;
+}
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
 }
