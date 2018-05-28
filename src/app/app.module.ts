@@ -15,6 +15,7 @@ import { IngredientsComponent } from './youmade/ingredients/ingredients.componen
 import { CartComponent } from './cart/cart.component';
 import { ProductsListComponent } from './products-list/products-list.component';
 import { ProductsEditComponent } from './products-list/products-edit/products-edit.component';
+import { IngredientsService } from './ingredients.service';
 
 
 
@@ -41,7 +42,9 @@ import { ProductsEditComponent } from './products-list/products-edit/products-ed
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    IngredientsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
