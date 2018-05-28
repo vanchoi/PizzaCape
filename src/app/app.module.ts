@@ -15,6 +15,8 @@ import { IngredientsComponent } from './youmade/ingredients/ingredients.componen
 import { CartComponent } from './cart/cart.component';
 import { ProductsListComponent } from './products-list/products-list.component';
 import { ProductsEditComponent } from './products-list/products-edit/products-edit.component';
+import { ManagmentComponent } from './managment/managment.component';
+import { ManagmentIngredientsComponent } from './managment-ingredients/managment-ingredients.component';
 
 
 
@@ -34,7 +36,9 @@ import { ProductsEditComponent } from './products-list/products-edit/products-ed
     IngredientsComponent,
     CartComponent,
     ProductsListComponent,
-    ProductsEditComponent
+    ProductsEditComponent,
+    ManagmentComponent,
+    ManagmentIngredientsComponent
     
   ],
   imports: [
