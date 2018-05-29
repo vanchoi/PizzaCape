@@ -1,39 +1,33 @@
 <div class="container">
-
-  
-  <a routerLink = "/ourmenu"><button id="ourMenuBtn">See Our Menu</button></a>
-  <a routerLink = ""><button class="btnClose">Close</button></a>
-
-
   <div class="row">
     <div class="colLeft">
-        <app-ingredients (price)="onPriceChange($event)"></app-ingredients>
-      
+      <app-ingredients (price)="onPriceChange($event)"></app-ingredients>
+
     </div>
 
 
     <div class="colRight">
-      <img src="../../assets/images/supreme.jpg"  width="700"  id="youmadePizza">
-  
-    <div class="pizzaSize">
-      Size:
-      <input type="radio" name="size" checked (click)="onSizeChange('M')"  />M
-      <input type="radio" name="size"  (click)="onSizeChange('L')"/>L     
-       <!-- Quantity:
+      <img src="../../assets/images/supreme.jpg" width="700" id="youmadePizza">
+
+      <div class="pizzaSize">
+        Size:
+        <input type="radio" name="size" checked (click)="onSizeChange('M')" />M
+        <input type="radio" name="size" (click)="onSizeChange('L')" />L
+        <!-- Quantity:
       <input type="number" min="1" max="10" value="1" />  -->
-    </div>
+      </div>
 
-    <div class="pizzaQuantity">
-      Quantity:
-      <input type="number" min="1" max="10" value="1" id="quantity" [(ngModel)]="quantity" />
-    </div>
+      <div class="pizzaQuantity">
+        Quantity:
+        <input type="number" min="1" max="10" value="1" id="quantity" [(ngModel)]="quantity" />
+      </div>
 
-    <div class="price">
-      Price: {{(totalPrice * quantity)}}
-    </div>
-    
+      <div class="price">
+        Price: {{(totalPrice * quantity)}}
+      </div>
+
       <button class="addCart"> Add to Cart </button>
-   
+
     </div>
   </div>
 

@@ -8,7 +8,6 @@ import { PaymentinfoComponent } from './paymentinfo/paymentinfo.component';
 import { YoumadeComponent } from './youmade/youmade.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { OurmenuComponent } from './ourmenu/ourmenu.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -34,7 +33,6 @@ import { ManagmentIngredientsComponent } from './managment-ingredients/managment
     YoumadeComponent,
     HomeComponent,
     LoginComponent,
-    OurmenuComponent,
     ContactComponent,
     AboutComponent,
     NavbarComponent,
