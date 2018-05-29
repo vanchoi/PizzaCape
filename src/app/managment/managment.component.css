@@ -1,0 +1,19 @@
+button{
+    background-color: lightseagreen;
+    padding: 20px;
+    color: white;
+    border-radius: 10px;
+    width: 250px;
+    margin-top: 200px;
+    margin-left: 145px;
+}
+
+#close{
+    color: white;
+    background-color: #2581bc;
+    margin-left: 1050px;
+    margin-top: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    position: fixed;
+}

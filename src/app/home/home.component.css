@@ -29,7 +29,7 @@ a{
 #home-buttons{
     position: relative;
     margin-left: 380px;
-    margin-top: 300px;
+    margin-top: 200px;
 }
 
 #logo{
@@ -43,6 +43,17 @@ a{
     margin-top: -65px;
     width: 5px;
     height: 1px;
+}
+
+#btnAdmin{
+    position: rel;
+    background-color: #2581bc;
+    padding: 5px;
+    color: white;
+    border-radius: 10px;
+    width: 150px;
+    margin-left: 1150px;
+    margin-top: 50px;
 }
 
 button{

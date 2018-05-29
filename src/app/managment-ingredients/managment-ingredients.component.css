@@ -1,0 +1,43 @@
+#ingredients{
+    margin-top: 50px;
+    position: absolute;
+}
+
+#addIngredients{
+    margin-top: 70px;
+    margin-left: 800px;
+    position: fixed;
+}
+ button{
+    margin-left: 250px;
+    color: white;
+    background-color: #2581bc;
+    padding: 5px;
+    border-radius: 5px;
+ }
+
+#inputName{
+    margin-left: 50px;
+}
+
+#inputDescription{
+    margin-left: 15px;
+}
+
+#inputQuantity{
+    margin-left: 35px;
+}
+
+#inputPrice{
+    margin-left: 57px;
+}
+
+ #close{
+    color: white;
+    background-color: #2581bc;
+    margin-top:20px;
+    margin-left: 1150px;
+    padding: 5px;
+    border-radius: 5px;
+    position: fixed;
+}
