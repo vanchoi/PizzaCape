@@ -27,6 +27,6 @@ export class SignUpComponent {
   onSubmit() {
     console.log('form submited');
     console.log(this.userForm);
-    this.userForm.reset();
+    // this.userForm.reset();
   }
 }

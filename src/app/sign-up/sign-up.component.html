@@ -54,7 +54,7 @@
         <input class="form-control" formControlName="password">
       </label>
     </div>
-    <button type="submit" class="btn btn-primary" [disabled]="!userForm.valid">Submit</button>
+    <button class="btn btn-primary" [disabled]="!userForm.valid">Submit</button>
   </form>
   <span *ngIf="!userForm.valid && userForm.touched" class="help-block">Please enter a valid data</span>
 </div>

@@ -8,11 +8,14 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { PaymentinfoComponent } from './paymentinfo/paymentinfo.component';
 import { YoumadeComponent } from './youmade/youmade.component';
 import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
+import { AuthenticationService } from './user/service/auth.service';
+import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './user/login/login.component';
 import { OurmenuComponent } from './ourmenu/ourmenu.component';
 import { AddUserComponent } from './user/add-user/add-user.component';
 import { EditUserComponent } from './user/edit-user/edit-user.component';
 import { ListUserComponent } from './user/list-user/list-user.component';
+import { UserService } from './user/service/user.service';
 
 
 
@@ -34,9 +37,10 @@ import { ListUserComponent } from './user/list-user/list-user.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AuthenticationService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
