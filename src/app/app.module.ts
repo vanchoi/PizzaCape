@@ -26,14 +26,9 @@ import { ManagmentIngredientsComponent } from './managment-ingredients/managment
 // Services
 import { IngredientsService } from './ingredients.service';
 
-<<<<<<< HEAD
-import { ManagmentComponent } from './managment/managment.component';
-import { ManagmentIngredientsComponent } from './managment-ingredients/managment-ingredients.component';
+
 import { PizzasComponent } from './home/pizzas/pizzas.component';
-=======
 
-
->>>>>>> 31579907e1b75f375701efec0627df53be530bbc
 
 
 
