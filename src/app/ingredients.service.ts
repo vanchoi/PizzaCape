@@ -1,26 +1,20 @@
 import { Injectable } from '@angular/core';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { Ingredient } from './shared/ingredient.model';
+import { Observable } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class IngredientsService {
 
-  constructor() { }
+  private _url: string = "./assets/data/ingredients.json";
 
-  getIngredients(){
-    return [
-      {"name" : "Tomato Sauce" , "singlePrice" : 1, "amount":0},
-      {"name" : "Fresh Tomato" , "singlePrice" : 2, "amount":0},
-      {"name" : "Fresh Peppers" , "singlePrice" : 3, "amount":0},
-      {"name" : "Olives" , "singlePrice" : 2, "amount":0},
-      {"name" : "Mushrooms" , "singlePrice" : 1, "amount":0},
-      {"name" : "Feta Cheese" , "singlePrice" : 3, "amount":0},
-      {"name" : "Mozzarella" , "singlePrice" : 2, "amount":0},
-      {"name" : "Smoked Ham" , "singlePrice" : 3, "amount":0},
-      {"name" : "Bacon" , "singlePrice" : 2, "amount":0},
-      {"name" : "Oregano" , "singlePrice" : 1, "amount":0},
-      
-    ]
+  constructor(private http: HttpClient) { }
+
+  getIngredients(): Observable<Ingredient[]> {
+    return this.http.get<Ingredient[]>(this._url);
 
   }
 

@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { Ingredient } from 'src/app/shared/ingredient.model';
 import { IngredientsService } from '../../ingredients.service';
 
@@ -7,30 +7,38 @@ import { IngredientsService } from '../../ingredients.service';
     templateUrl:'./ingredients.component.html',
     styleUrls: ['./ingredients.component.css']
 })
-export class IngredientsComponent {  
-    // public ingredients = []
+export class IngredientsComponent implements OnInit {  
+    public ingredients = []
 
-    // constructor(private _ingredientService: IngredientsService){
-    // }
+    constructor(private _ingredientService: IngredientsService){
+    }
 
-    // ngOnInit(){
-    //     this.ingredients = this._ingredientService.getIngredients();
-    // }
+    ngOnInit(){
+        this._ingredientService.getIngredients()
+        .subscribe((ingredients: Ingredient[]) => {
+            ingredients.forEach(ingredient => {
+                this.ingredients.push(new Ingredient(ingredient.name, ingredient.singlePrice, ingredient.amount)); 
+            });
+        });
+    }
+
+
+
 
     @Output() price = new EventEmitter<number>();
     
-    ingredients: Ingredient[] = [
-        new Ingredient('Tomato Sauce', 1, 0 ),
-        new Ingredient('Fresh Tomato', 2, 0 ),
-        new Ingredient('Fresh Peppers', 3, 0 ),
-        new Ingredient('Olives', 1, 0 ),
-        new Ingredient('Mushrooms', 2, 0 ),
-        new Ingredient('Feta Cheese', 3, 0 ),
-        new Ingredient('Mozzarella', 2, 0 ),
-        new Ingredient('Smoked Ham', 2, 0 ),
-        new Ingredient('Bacon', 2, 0 ),
-        new Ingredient('Oregano', 1, 0 )
-    ];
+    // ingredients: Ingredient[] = [
+    //     new Ingredient('Tomato Sauce', 1, 0 ),
+    //     new Ingredient('Fresh Tomato', 2, 0 ),
+    //     new Ingredient('Fresh Peppers', 3, 0 ),
+    //     new Ingredient('Olives', 1, 0 ),
+    //     new Ingredient('Mushrooms', 2, 0 ),
+    //     new Ingredient('Feta Cheese', 3, 0 ),
+    //     new Ingredient('Mozzarella', 2, 0 ),
+    //     new Ingredient('Smoked Ham', 2, 0 ),
+    //     new Ingredient('Bacon', 2, 0 ),
+    //     new Ingredient('Oregano', 1, 0 )
+    // ];
 
     sumAllIngredients() {
         let total: number = 0;

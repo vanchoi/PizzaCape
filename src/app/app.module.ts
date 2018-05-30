@@ -1,8 +1,12 @@
+// Modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+
+// Components
+import { AppComponent } from './app.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { PaymentinfoComponent } from './paymentinfo/paymentinfo.component';
 import { YoumadeComponent } from './youmade/youmade.component';
@@ -15,12 +19,21 @@ import { IngredientsComponent } from './youmade/ingredients/ingredients.componen
 import { CartComponent } from './cart/cart.component';
 import { ProductsListComponent } from './products-list/products-list.component';
 import { ProductsEditComponent } from './products-list/products-edit/products-edit.component';
+import { ManagmentComponent } from './managment/managment.component';
+import { ManagmentIngredientsComponent } from './managment-ingredients/managment-ingredients.component';
 
+
+// Services
 import { IngredientsService } from './ingredients.service';
 
+<<<<<<< HEAD
 import { ManagmentComponent } from './managment/managment.component';
 import { ManagmentIngredientsComponent } from './managment-ingredients/managment-ingredients.component';
 import { PizzasComponent } from './home/pizzas/pizzas.component';
+=======
+
+
+>>>>>>> 31579907e1b75f375701efec0627df53be530bbc
 
 
 
@@ -49,7 +62,8 @@ import { PizzasComponent } from './home/pizzas/pizzas.component';
   imports: [
     FormsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [
     IngredientsService
