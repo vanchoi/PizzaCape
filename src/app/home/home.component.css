@@ -11,40 +11,40 @@
     border-style: solid;
     padding: 15px;
     margin-left: 50px;
-    margin-top: 80px;
+    margin-top: 20px;
     position: fixed;
     width: 250px;
-    height: 500px;
+    height: 450px;
 }
 
 #margherita{
     border-style: solid;
     padding: 15px;
     margin-left: 360px;
-    margin-top: 80px;
+    margin-top: 20px;
     position: fixed;
     width: 250px;
-    height: 500px;
+    height: 450px;
 }
 
 #supreme{
     border-style: solid;
     padding: 15px;
-    margin-left: 660px;
-    margin-top: 80px;
+    margin-left: 670px;
+    margin-top: 20px;
     position: fixed;
     width: 250px;
-    height: 500px;
+    height: 450px;
 }
 
 #quattro{
     border-style: solid;
     padding: 15px;
-    margin-left: 960px;
-    margin-top: 80px;
+    margin-left: 980px;
+    margin-top: 20px;
     position: fixed;
     width: 250px;
-    height: 500px;
+    height: 450px;
 }
 
 .inputbutton{
@@ -63,7 +63,7 @@ label{
 
 .buttons{
     margin-left: 30px;
-    margin-top: 40px;
+    margin-top: 10px;
 }
 #btnAddToCart{
     margin-right: 10px;

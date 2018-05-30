@@ -1,11 +1,11 @@
 h1{
-    padding-top: 100px;
-    padding-left: 400px;
+    margin-top: 20px;
+    margin-left: 350px;
     position: absolute;
 }
 #email{
     padding-left: 500px;
-    padding-top: 200px;
+    margin-top: 100px;
 }
 #pass{
     padding-left: 500px;
@@ -28,8 +28,8 @@ a{
 #login{
     position: absolute;
     margin-top: 60px;
-    margin-left: 800px;
-    width: 100px;
+    margin-left: 850px;
+    width: 150px;
     background-color: #2581bc;
     color: white;
     border-radius: 5px;
@@ -54,4 +54,6 @@ a{
     margin-top: 20px;
 }
 
-
+#link{
+    position: absolute;
+}

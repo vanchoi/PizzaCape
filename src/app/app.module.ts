@@ -20,6 +20,7 @@ import { IngredientsService } from './ingredients.service';
 
 import { ManagmentComponent } from './managment/managment.component';
 import { ManagmentIngredientsComponent } from './managment-ingredients/managment-ingredients.component';
+import { PizzasComponent } from './home/pizzas/pizzas.component';
 
 
 
@@ -41,7 +42,8 @@ import { ManagmentIngredientsComponent } from './managment-ingredients/managment
     ProductsListComponent,
     ProductsEditComponent,
     ManagmentComponent,
-    ManagmentIngredientsComponent
+    ManagmentIngredientsComponent,
+    PizzasComponent
     
   ],
   imports: [
