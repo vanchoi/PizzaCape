@@ -21,15 +21,12 @@ import { ProductsListComponent } from './products-list/products-list.component';
 import { ProductsEditComponent } from './products-list/products-edit/products-edit.component';
 import { ManagmentComponent } from './managment/managment.component';
 import { ManagmentIngredientsComponent } from './managment-ingredients/managment-ingredients.component';
+import { PizzasComponent } from './home/pizzas/pizzas.component';
 
 
 // Services
 import { IngredientsService } from './ingredients.service';
-
-
-import { PizzasComponent } from './home/pizzas/pizzas.component';
-
-
+import { UserService } from './user/user.service';
 
 
 
@@ -61,7 +58,8 @@ import { PizzasComponent } from './home/pizzas/pizzas.component';
     HttpClientModule
   ],
   providers: [
-    IngredientsService
+    IngredientsService,
+    UserService
   ],
   bootstrap: [AppComponent]
 })
