@@ -1,5 +1,5 @@
-<form *ngFor="let pizza of pizzas; let i = index;" [ngClass]="{'line2': i % 2 === 1}">
-  {{ pizza.imgUrl }}
+<form *ngFor="let pizza of pizzas; let i = index;">
+  <img src="{{ pizza.imgUrl }}" width="250" height="150"/>
   <h1>{{ pizza.name }}</h1>
   <p>{{ pizza.description }}</p>
   <div>

@@ -1,6 +1,6 @@
 [
         {
-            "imgUrl" : "../images/kapricioza.jpg",
+            "imgUrl" : "../../assets/images/kapricioza.jpg",
             "name": "Capricciosa",
             "description": "pizza dough, tomato sauce, mozzarella, mushrooms, ham, black olives",
             "amount": 1,
