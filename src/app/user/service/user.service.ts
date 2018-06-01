@@ -1,25 +1,33 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { User } from '../model/user.model';
+import { environment } from '../../../environments/environment';
+import { Observable, of } from 'rxjs';
 
 @Injectable()
 export class UserService {
-    constructor(private http: HttpClient) { }
-        baseUrl = 'http://localhost:7000/users';
+    userUrl: string = environment.apiUrl;
+    // baseUrl = 'http://localhost:7000/api/users';
 
-        getUsers() {
-           return this.http.get<User[]>(this.baseUrl);
-        }
+    constructor(private http: HttpClient) { }
+
+        // getUsers() {
+        //    return this.http.get<User[]>(this.userUrl);
+        // }
+
+        getUsers(): Observable<User[]> {
+            return this.http.get<User[]>(this.userUrl);
+          }
         getUserById(id: number) {
-            return this.http.get<User>(this.baseUrl + '/' + id);
+            return this.http.get<User>(this.userUrl + '/' + id);
         }
         createUser(user: User) {
-            return this.http.post(this.baseUrl, user);
+            return this.http.post(this.userUrl, user);
         }
         updateUser(user: User) {
-            return this.http.put(this.baseUrl + '/' + user.id, user);
+            return this.http.put(this.userUrl + '/' + user.id, user);
         }
         deleteUser(id: number) {
-            return this.http.delete(this.baseUrl + '/' + id);
+            return this.http.delete(this.userUrl + '/' + id);
         }
 }

@@ -5,19 +5,19 @@
 //     password = '';
 // }
 
-export const user: User[] = [
-    {
-        id: 1,
-        firstName: 'Admin',
-        lastName: 'admin',
-        email: 'admin@gmail.com',
-    }
-];
+// export const user: User[] = [
+//     {
+//         id: 1,
+//         firstName: 'Admin',
+//         lastName: 'admin',
+//         email: 'admin@gmail.com',
+//     }
+// ];
 
 export class User {
-
     id: number;
-    firstName: string;
-    lastName: string;
+    name: string;
+    username: string;
     email: string;
+    password: string;
 }

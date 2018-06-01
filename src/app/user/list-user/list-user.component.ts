@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ANALYZE_FOR_ENTRY_COMPONENTS } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from '../service/user.service';
 import { User } from '../model/user.model';
@@ -14,8 +14,18 @@ export class ListUserComponent implements OnInit {
   constructor(private router: Router, private userService: UserService) { }
 
   ngOnInit() {
-    this.userService.getUsers().subscribe(data => { this.users = data; });
+    // this.userService.getUsers().subscribe(data => { this.users = data; });
+
+      this.userService.getUsers()
+      .subscribe((users: User[]) => {
+          users.forEach(ingredient => {
+              this.users.push(new User());
+          });
+      });
   }
+
+
+
   deleteUser(user: User): void {
     this.userService.deleteUser(user.id).subscribe(data => { this.users = this.users.filter(u => u !== user); });
   }

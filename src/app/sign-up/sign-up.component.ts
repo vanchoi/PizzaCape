@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
+import { UserService } from '../user/service/user.service';
+import { User } from '../user/model/user.model';
 
 
 @Component({
@@ -7,24 +9,30 @@ import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms'
   templateUrl: './sign-up.component.html',
   styleUrls: ['./sign-up.component.css']
 })
-export class SignUpComponent {
+export class SignUpComponent implements OnInit {
   userForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
-    this.createForm();
+  constructor(private fb: FormBuilder, private service: UserService) {
+
   }
 
   createForm() {
     this.userForm = this.fb.group({
-      name: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', Validators.required]
+      name: ['Vancho Ivanov', Validators.required],
+      username: ['Vancho', Validators.required],
+      email: ['ivanov.vanco@gmail.com', [Validators.required, Validators.email]],
+      password: ['123456', Validators.required]
     });
   }
-  // ngOnInit() {
-  //   this.createForm();
-  // }
+  ngOnInit() {
+    this.createForm();
+  }
   onSubmit() {
+    this.service.createUser(this.userForm.value).subscribe(response => {
+      console.log(response);
+    });
+    // tslint:disable-next-line:no-debugger
+    // debugger;
     console.log('form submited');
     console.log(this.userForm);
     // this.userForm.reset();
