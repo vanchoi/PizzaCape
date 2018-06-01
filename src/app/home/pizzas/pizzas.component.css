@@ -1,0 +1,36 @@
+form{
+    border-style: solid;
+    padding: 15px;
+    margin: 20px;
+    width: 250px;
+    height: 450px;
+    display: inline-block;
+    background-color: wheat;    
+}
+
+.inputbutton{
+    margin-left: 70px;
+    margin-top: 16px;
+}
+
+.inputbutton2{
+    margin-left: 20px;
+    margin-top: 16px;
+}
+
+label{
+    position: absolute;
+}
+
+.buttons{
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+#btnAddToCart{
+    margin-right: 10px;
+}
+
+#btnEditPizza{
+    margin-left: 10px;
+}

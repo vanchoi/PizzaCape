@@ -27,6 +27,7 @@ import { PizzasComponent } from './home/pizzas/pizzas.component';
 // Services
 import { IngredientsService } from './ingredients.service';
 import { UserService } from './user/user.service';
+import { PizzaService } from './home/pizzas/pizza.service';
 
 
 
@@ -59,7 +60,8 @@ import { UserService } from './user/user.service';
   ],
   providers: [
     IngredientsService,
-    UserService
+    UserService,
+    PizzaService
   ],
   bootstrap: [AppComponent]
 })
