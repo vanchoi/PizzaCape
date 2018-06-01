@@ -52,8 +52,8 @@ import { UserService } from './user/user.service';
     
   ],
   imports: [
-    FormsModule,
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     HttpClientModule
   ],

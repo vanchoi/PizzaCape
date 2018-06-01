@@ -23,7 +23,7 @@
 
     <div class="clearfix">
       <!-- <a routerLink = ""><button type="button" class="cancelbtn">Cancel</button></a> -->
-      <button type="submit" class="btn btn-success" [disabled]="!registerForm.form.valid">Submit</button>
+      <button (click)="registerUser()" type="submit" class="btn btn-success" [disabled]="!registerForm.form.valid">Submit</button>
     </div>
   </div>
 </form>

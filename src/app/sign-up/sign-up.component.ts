@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user/user.model';
+import { UserService } from '../user/user.service';
 
 
 @Component({
@@ -8,16 +9,29 @@ import { User } from '../user/user.model';
   styleUrls: ['./sign-up.component.css']
 })
 export class SignUpComponent implements OnInit {
-  constructor() { }
+
+  model = {}
+
+  constructor(private _user: UserService) {
+    
+   }
 
   ngOnInit() {
   }
 
-  model : User = new User();
+  // model : User = new User();
 
   onSubmit(registerForm) {
-    debugger;
+    // debugger;
     
+  }
+
+  registerUser(){
+    this._user.registerUser(this.model)
+      .subscribe(
+        res => console.log(res),
+        err => console.log(err)
+      )
   }
 
 }
