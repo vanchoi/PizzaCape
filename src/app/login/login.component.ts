@@ -8,15 +8,19 @@ import { UserService } from '../user/user.service';
 })
 export class LoginComponent implements OnInit {
 
-  loginUser = {}
+  loginUsers = {}
 
   constructor(private _user: UserService) { }
 
   ngOnInit() {
   }
 
-  logUser(){
-    console.log(this.loginUser)
+  loginUser(){
+    this._user.loginUser(this.loginUsers)
+      .subscribe(
+        res => console.log(res),
+        err => console.log(err)
+      )
   }
 
 }
