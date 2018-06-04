@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './/app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { TokenInterceptor } from './token.interceptor';
 
 // Components
 import { AppComponent } from './app.component';
@@ -51,7 +53,7 @@ import { ManageIngredientsService } from './managment-ingredients/manage-ingredi
     ManagmentComponent,
     ManagmentIngredientsComponent,
     PizzasComponent
-    
+
   ],
   imports: [
     BrowserModule,
@@ -63,7 +65,12 @@ import { ManageIngredientsService } from './managment-ingredients/manage-ingredi
     IngredientsService,
     UserService,
     PizzaService,
-    ManageIngredientsService
+    ManageIngredientsService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    },
   ],
   bootstrap: [AppComponent]
 })
