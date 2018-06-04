@@ -9,11 +9,11 @@ export class UserService {
 
     constructor(private http: HttpClient) { }
 
-    registerUser(user){
-        return this.http.post<any>(this.registerUrl, user)
+    registerUser(user) {
+        return this.http.post<any>(this.registerUrl, user);
     }
-    loginUser(user){
-        return this.http.post<any>(this.loginUrl, user)
+    loginUser(user) {
+        return this.http.post<any>(this.loginUrl, user);
     }
 
 

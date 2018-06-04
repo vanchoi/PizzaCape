@@ -4,29 +4,25 @@ import { IngredientsService } from '../../ingredients.service';
 
 @Component({
     selector: 'app-ingredients',
-    templateUrl:'./ingredients.component.html',
+    templateUrl: './ingredients.component.html',
     styleUrls: ['./ingredients.component.css']
 })
-export class IngredientsComponent implements OnInit {  
-    public ingredients = []
+export class IngredientsComponent implements OnInit {
+    public ingredients = [];
+    @Output() price = new EventEmitter<number>();
 
-    constructor(private _ingredientService: IngredientsService){
+    constructor(private _ingredientService: IngredientsService) {
     }
 
-    ngOnInit(){
+    ngOnInit() {
         this._ingredientService.getIngredients()
         .subscribe((ingredients: Ingredient[]) => {
             ingredients.forEach(ingredient => {
-                this.ingredients.push(new Ingredient(ingredient.name, ingredient.singlePrice, ingredient.amount)); 
+                this.ingredients.push(new Ingredient(ingredient.name, ingredient.singlePrice, ingredient.amount));
             });
         });
     }
 
-
-
-
-    @Output() price = new EventEmitter<number>();
-    
     // ingredients: Ingredient[] = [
     //     new Ingredient('Tomato Sauce', 1, 0 ),
     //     new Ingredient('Fresh Tomato', 2, 0 ),
@@ -41,8 +37,8 @@ export class IngredientsComponent implements OnInit {
     // ];
 
     sumAllIngredients() {
-        let total: number = 0;
-        this.ingredients.forEach((ingredient)=>{
+        let total = 0;
+        this.ingredients.forEach((ingredient) => {
             total += ingredient.amount * ingredient.singlePrice;
         });
         this.price.emit(total);

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Ingredient } from '../shared/ingredient.model'
+import { Ingredient } from '../shared/ingredient.model';
 
 @Component({
   selector: 'app-products-list',
@@ -13,7 +13,7 @@ export class ProductsListComponent implements OnInit {
         new Ingredient('Fresh Peppers', 0, 10000 ),
         new Ingredient('Olives', 0, 10000 ),
         new Ingredient('Mushrooms', 0, 10000 ),
-        new Ingredient('Feta Cheese', 0,10000 ),
+        new Ingredient('Feta Cheese', 0, 10000 ),
         new Ingredient('Mozzarella', 0, 10000 ),
         new Ingredient('Smoked Ham', 0, 10000 ),
         new Ingredient('Bacon', 0, 10000 ),

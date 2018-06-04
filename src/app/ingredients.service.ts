@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class IngredientsService {
 
-  private _url: string = "./assets/data/ingredients.json";
+  private _url = './assets/data/ingredients.json';
 
   constructor(private http: HttpClient) { }
 

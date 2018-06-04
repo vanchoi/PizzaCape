@@ -10,10 +10,10 @@ import { UserService } from '../user/user.service';
 })
 export class SignUpComponent implements OnInit {
 
-  model = {}
+  model = {};
 
   constructor(private _user: UserService) {
-    
+
    }
 
   ngOnInit() {
@@ -23,15 +23,14 @@ export class SignUpComponent implements OnInit {
 
   onSubmit(registerForm) {
     // debugger;
-    
   }
 
-  registerUser(){
+  registerUser() {
     this._user.registerUser(this.model)
       .subscribe(
         res => console.log(res),
         err => console.log(err)
-      )
+      );
   }
 
 }
