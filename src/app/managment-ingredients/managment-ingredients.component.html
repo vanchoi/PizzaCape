@@ -1,4 +1,4 @@
-<a routerLink='/managment'>
+<!-- <a routerLink='/managment'>
   <button id="close">Back to admin panel</button>
 </a>
 
@@ -24,4 +24,37 @@
   </p>
 
   <button>Submit</button>
-</form>
+</form> -->
+
+<div class="container">
+  <div class="row">
+    <div class="colLeft">
+      <app-ingredients (price)="onPriceChange($event)"></app-ingredients>
+
+    </div>
+
+
+    <div class="colRight">
+      <form id="addIngredients">
+        <h1>Add new ingredient</h1>
+        <p>
+          <label>Name:</label>
+          <input type="text" name="name" id="inputName">
+        </p>
+      
+        <p>
+          <label>Description:</label>
+          <input type="text" name="description" id="inputDescription">
+        </p>
+      
+        <p>
+          <label>Price:</label>
+          <input type="text" name="price" id="inputPrice">
+        </p>
+      
+        <button>Submit</button>
+      </form>
+
+    </div>
+  </div>
+</div>
