@@ -6,12 +6,12 @@ import { Ingredient } from '../shared/ingredient.model';
   providedIn: 'root'
 })
 export class ManageIngredientsService {
-  private ingredientUrl = 'http://localhost:7000/ingredientsapi/ingredient'
+  private ingredientUrl = 'http://localhost:7000/ingredientsapi/ingredient';
 
   constructor(private http: HttpClient) { }
 
-  addIngredient(ingredient){
-    return this.http.post(this.ingredientUrl, ingredient);
+  addIngredient(ingredient) {
+    return this.http.post<any>(this.ingredientUrl, ingredient);
   }
 
 
