@@ -19,5 +19,9 @@ export class UserService {
         return this.http.post<any>(this.loginUrl, user);
     }
 
+    loggedIn() {
+        return !!localStorage.getItem('x-access-token');
+    }
+
 
 }

@@ -31,6 +31,7 @@ import { IngredientsService } from './ingredients.service';
 import { UserService } from './user/user.service';
 import { PizzaService } from './home/pizzas/pizza.service';
 import { ManageIngredientsService } from './managment-ingredients/manage-ingredients.service';
+import { UserGuard } from './user/user.guard';
 
 
 
@@ -71,6 +72,7 @@ import { ManageIngredientsService } from './managment-ingredients/manage-ingredi
       useClass: TokenInterceptor,
       multi: true
     },
+    UserGuard
   ],
   bootstrap: [AppComponent]
 })
