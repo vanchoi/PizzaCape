@@ -1,26 +1,3 @@
-<!-- <h1>Login</h1>
-<div>
-  <p id="email">Email:</p>
-  <form class="inputInfo">
-    <input type="text" name="email">
-  </form>
-</div>
-<div>
-  <p id="pass">Password:</p>
-  <form class="inputInfo">
-    <input type="text" name="password">
-  </form>
-  <p id="link">
-    <a routerLink="">Forgot password?</a>
-  </p>
-</div>
-<div>
-  <button id="login">Login</button>
-  <a routerLink="/signup">
-    <button id="createacc">Create your account</button>
-  </a>
-</div> -->
-
 <form >
   <div class="container">
     <h1>Login</h1>
@@ -28,10 +5,10 @@
     <hr>
 
     <label for="username"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="username" required #username="ngModel" id="username" [(ngModel)]="loginUsers.username">
+    <input type="text" placeholder="Enter Username" name="username" required #username="ngModel" id="username" [(ngModel)]="user.username">
 
     <label for="password"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="password" required #password="ngModel" id="password" [(ngModel)]="loginUsers.password">
+    <input type="password" placeholder="Enter Password" name="password" required #password="ngModel" id="password" [(ngModel)]="user.password">
 
     <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 

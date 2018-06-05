@@ -1,13 +1,16 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { User } from './user.model';
+import { BehaviorSubject } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Injectable()
 export class UserService {
     private registerUrl = 'http://localhost:7000/api/users';
     private loginUrl = 'http://localhost:7000/api/authenticate';
 
-    constructor(private http: HttpClient) { }
+    constructor(private http: HttpClient, private router: Router) {
+    }
 
     registerUser(user) {
         return this.http.post<any>(this.registerUrl, user);
@@ -17,17 +20,4 @@ export class UserService {
     }
 
 
-    // getUsers() {
-    //     return this.http.get<User[]>(this.baseUrl);
-    // }
-    // getUserById(id: number) {
-    //     return this.http.get<User>(this.baseUrl + '/' + id);
-    // }
-    // }
-    // updateUser(user: User) {
-    //     return this.http.put(this.baseUrl + '/', user);
-    // }
-    // deleteUser(id: number) {
-    //     return this.http.delete(this.baseUrl + '/' + id);
-    // }
 }
