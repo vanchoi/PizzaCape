@@ -1,7 +1,7 @@
 export class Ingredient {
     public name: string;
     public amount: number;
-    public singlePrice: number;
+    public price: number;
 
     decrease() {
         if (this.amount) {
@@ -16,10 +16,10 @@ export class Ingredient {
     }
 
 
-    constructor(name: string, singlePrice: number, amount: number) {
+    constructor(name: string, price: number, amount: number) {
         this.name = name;
         this.amount = amount;
-        this.singlePrice = singlePrice;
+        this.price = price;
     }
 
 }

@@ -2,7 +2,7 @@
 <ol>
   <li *ngFor="let ingredient of ingredients; let i = index;" [ngClass]="{'line2': i % 2 === 1}">
     {{ ingredient.name }}
-    <span class="cena"> {{ ingredient.singlePrice }}$
+    <span class="cena"> {{ ingredient.price }}$
       <button class="btnMinus" (click)="ingredient.decrease();sumAllIngredients();">-</button>
       {{ ingredient.amount }}
       <button type="button" class="btnPlus" (click)="ingredient.increase();sumAllIngredients();">+</button>
