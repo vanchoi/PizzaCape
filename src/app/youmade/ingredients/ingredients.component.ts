@@ -9,7 +9,7 @@ import { IngredientsService } from '../../ingredients.service';
 })
 export class IngredientsComponent implements OnInit {
     public ingredients = [];
-    @Output() price = new EventEmitter<number>();
+    @Output() _price = new EventEmitter<number>();
 
     constructor(private _ingredientService: IngredientsService) {
     }
@@ -18,7 +18,7 @@ export class IngredientsComponent implements OnInit {
         this._ingredientService.getIngredients()
         .subscribe((ingredients: Ingredient[]) => {
             ingredients.forEach(ingredient => {
-                this.ingredients.push(new Ingredient(ingredient.name, ingredient.singlePrice, ingredient.amount));
+                this.ingredients.push(new Ingredient(ingredient.name, ingredient.price, ingredient.amount));
             });
         });
     }
@@ -39,8 +39,8 @@ export class IngredientsComponent implements OnInit {
     sumAllIngredients() {
         let total = 0;
         this.ingredients.forEach((ingredient) => {
-            total += ingredient.amount * ingredient.singlePrice;
+            total += ingredient.amount * ingredient.price;
         });
-        this.price.emit(total);
+        this._price.emit(total);
     }
 }
