@@ -1,120 +1,85 @@
-
-div.row{
-    /* text-align: center; */
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 50px;
-    margin-top: 30px;
-}
 .line2{
-    background-color:#2d3d4d;
+    background-color: rgba(185, 181, 154,0.1);
 }
-
+.container{
+    background-color: rgba(185, 181, 154,0.7);
+}
 .colLeft{
-    width:100%;
-    margin-left: 5%;
-    background-color: #3a4c5f;
+    width: 40%;
+    display: inline-block;
+    margin-left: 3%;
+    margin-right: 6%;
+    border-style: solid;
+    border-color: rgba(78, 76, 65, 0.3);
     color: White;
-    font-size: 1.3em;
-    /* height: 100%; */
-    
+    font-size: 1.3em;    
     border-radius: 4px;
 } 
 h2{
-    text-align: center;
+    margin: auto;
     text-decoration-line: underline;
 }
 
 .colRight{
-    
+    width: 40%;
+    display: inline-block;
+    margin-left: 3%;
+    margin-right: 6%;
     text-align: center;
-    /* height: 100ah; */
-    /* margin-right: 10%; */
-    /* margin-left: 10%; */
+    font-size: 1.3em; 
 }
 
-#ourMenuBtn{
-    color: white;
-    background-color: #2581bc;
-    margin-left: 50px;
-    margin-top: 20px;
-    padding: 5px;
-    border-radius: 5px;
-
-}
 
 li{
-    padding: 10px;
+    padding: 3%;
 }
 
-.btnClose{
-    float: right;
-    color: white;
-    background-color: #2581bc;
-    margin-right: 50px;
-    margin-top: 20px;
-    padding: 5px;
-    border-radius: 5px;
+#youmadePizza{
+    width: 100%;
+    max-width: 700px;
+    height: 100%;
+    margin: auto;
+    position: relative;
+    margin-top: 10%;
+
+
+
     
 }
 
-/* #yourPizza{
-    border-style: solid;
-    padding: 0px;
-    float: right;
-    margin-top: 80px;
-    margin-left: 30px;
-    width: 50%;
-    
-} */
-
-.cena{
-    float: right;;
-    margin-right: 5%;
-}
-
-ol li .btnMinus{
-    background: #f44336;
-    border-radius: 1.1em;
-    font-size:17px;
-    font-weight: 500;
-    margin:0px 15px 0px 70px;
-}
-
-ol li .btnPlus{
-    background: #4CAF50;
-    border-radius: 1.1em;
-    font-size:17px;
-    font-weight: 500;
-    margin:0px 0px 0px 15px;
-}
 
 .pizzaSize{
-    padding: 5px;
-    float:left;
-    position: relative;
-    margin-left:20%;
+    padding: 2%;
+    display: inline-block;
+    margin-left:5%;
+    margin-right:5%;
+    margin-top: 5%;
+   
+    
 }
 
 .pizzaQuantity{
-    padding: 5px;
-    float:right;
-    margin-right:20%;
+    padding: 2%;
+    display: inline-block;
+    margin-left:5%;
+    margin-right:5%;
+    margin-top: 5%;
 }
 
 .addCart{
     background: #4CAF50;
-    border-radius: 1.1em;
-    font-size:17px;
-    font-weight: 500;
+    border-radius: 1em;
+    font-size: 1.3em; 
+    font-weight: 300;
     padding: 8px;
 }
 
 .price{
     padding: 10px;
-    font-size: 20px;
-    margin-top:3%;
-
+    font-size: 1.3em; 
+    margin-left:5%;
+    margin-right:5%;
+    margin-bottom: 5%;
 }
 
 img {

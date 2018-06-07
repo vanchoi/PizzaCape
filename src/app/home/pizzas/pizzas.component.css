@@ -5,7 +5,7 @@ form{
     width: 250px;
     height: 450px;
     display: inline-block;
-    background-color: wheat;    
+    background: rgba(245, 222, 179, 0.9);
 }
 
 .inputbutton{

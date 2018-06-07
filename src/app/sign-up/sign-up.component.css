@@ -1,5 +1,13 @@
 * {box-sizing: border-box}
 
+form{
+  background-color: rgba(185, 181, 154,0.8);
+  width: 50%;
+  text-align: justify;
+  margin:auto;
+  padding: 20px;
+}
+
 /* Full-width input fields */
   input[type=text], input[type=password] {
   width: 100%;
