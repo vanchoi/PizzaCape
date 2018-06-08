@@ -30,7 +30,7 @@ export class ManagmentIngredientsComponent implements OnInit {
       );
   }
 
-  removeIngredient() {
+  removeIngredient(ingredient: Ingredient) {
     this.manageIngredients.deleteIngredient(this.ingredient)
     .subscribe(
       res => console.log(res),
