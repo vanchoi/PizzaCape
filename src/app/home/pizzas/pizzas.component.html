@@ -4,20 +4,20 @@
   <p>{{ pizza.description }}</p>
   <div>
     <label for="size">
-      <p>Size: </p>
+      <p><b>Size: </b></p>
     </label>
     <input type="radio" class="inputbutton" name="size" checked (click)="onSizeChange('M')" />M
     <input type="radio" class="inputbutton2" name="size" (click)="onSizeChange('L')" />L
   </div>
   <div>
     <label for="quantity">
-      <p>Quantity: </p>
+      <p><b>Quantity: </b></p>
     </label>
     <input type="number" name="quantity" class="inputbutton" min="1" max="10" value="1" id="quantity" [(ngModel)]="quantity"
     />
   </div>
   <div class="price">
-    <p>Price: {{((totalPrice+pizza.price) * quantity)}}</p>
+    <p><b>Price: {{((totalPrice+pizza.price) * quantity)}}</b></p>
   </div>
   <div class="buttons">
     <button id="btnAddToCart">Add to Cart</button>

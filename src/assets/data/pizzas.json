@@ -9,21 +9,21 @@
         {
             "imgUrl" : "../../assets/images/margarita.jpg",
             "name": "Margherita",
-            "description": "pizza dough, tomato sauce, mozzarella cheese, tomatoes, ham, fresh pepper, olives",
+            "description": "pizza dough, tomato sauce, cheese, tomatoes, ham, fresh pepper, olives",
             "amount": 1,
             "price" : 20
         },
         {
             "imgUrl" : "../../assets/images/supreme.jpg",
             "name": "Supreme",
-            "description": "pizza dough, pizza sauce, pepperoni, sausages, mushrooms, peppers, olives, cheese",
+            "description": "pizza dough, pizza sauce, sausages, mushrooms, peppers, olives, cheese",
             "amount": 1,
             "price" : 30
         },
         {
             "imgUrl" : "../../assets/images/quattro-stagioni.jpg",
             "name": "Quattro-stagioni",
-            "description": "pizza dough, tomatoes, mushrooms, garlic, mozzarella cheese, ham, olives",
+            "description": "pizza dough, tomatoes, mushrooms, garlic, cheese, ham, olives",
             "amount": 1,
             "price" : 40
         }

@@ -1,0 +1,11 @@
+<form>
+    <ol>
+        <li *ngFor="let order of orders">
+            {{ order.name }}
+            {{ order.description }}
+            {{ order.quantity }}
+            {{ order.price }}
+            <button class="btnDelete">x</button>
+        </li>
+    </ol>
+</form>
