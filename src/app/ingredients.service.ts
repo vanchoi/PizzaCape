@@ -9,12 +9,12 @@ import { Observable } from 'rxjs';
 })
 export class IngredientsService {
 
-  private _url = './assets/data/ingredients.json';
+  private getIngredientsUrl = 'http://localhost:7000/ingredientsapi/ingredients';
 
   constructor(private http: HttpClient) { }
 
   getIngredients(): Observable<Ingredient[]> {
-    return this.http.get<Ingredient[]>(this._url);
+    return this.http.get<Ingredient[]>(this.getIngredientsUrl);
 
   }
 

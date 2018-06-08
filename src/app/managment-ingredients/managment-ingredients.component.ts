@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ManageIngredientsService } from './manage-ingredients.service';
+import { Ingredient } from '../shared/ingredient.model';
 
 @Component({
   selector: 'app-managment-ingredients',
@@ -8,10 +9,17 @@ import { ManageIngredientsService } from './manage-ingredients.service';
 })
 export class ManagmentIngredientsComponent implements OnInit {
   ingredient = {};
+  public ingredients = [];
 
   constructor(private manageIngredients: ManageIngredientsService) { }
 
   ngOnInit() {
+    this.manageIngredients.getIngredients()
+        .subscribe((ingredients: Ingredient[]) => {
+            ingredients.forEach(ingredient => {
+                this.ingredients.push(new Ingredient(ingredient.name, ingredient.price, ingredient.amount));
+            });
+        });
   }
 
   addNewIngredient() {
@@ -20,6 +28,16 @@ export class ManagmentIngredientsComponent implements OnInit {
         res => console.log(res),
         err => console.log(err)
       );
+  }
+
+  removeIngredient() {
+    this.manageIngredients.deleteIngredient(this.ingredient)
+    .subscribe(
+      res => console.log(res),
+      err => console.log(err)
+    );
+
+
   }
 
 }

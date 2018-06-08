@@ -29,7 +29,15 @@
 <div class="container">
   <div class="row">
     <div class="colLeft">
-      <app-ingredients></app-ingredients>
+      <h2>Ingredients: </h2>
+        <ol>
+          <li *ngFor="let ingredient of ingredients; let i = index;" [ngClass]="{'line2': i % 2 === 1}">
+            {{ ingredient.name }}
+            <span class="cena"> {{ ingredient.price }}$
+              <button class="btnMinus" (click)="removeIngredient(ingredient.name)">-</button>
+            </span>
+          </li>
+        </ol>
 
     </div>
 
