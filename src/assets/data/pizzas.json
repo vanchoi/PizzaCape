@@ -22,8 +22,8 @@
         },
         {
             "imgUrl" : "../../assets/images/quattro-stagioni.jpg",
-            "name": "Quattro stagioni",
-            "description": "pizza dough, tomatoes, mushrooms, garlic, mozzarella cheese, ham, black olives",
+            "name": "Quattro-stagioni",
+            "description": "pizza dough, tomatoes, mushrooms, garlic, mozzarella cheese, ham, olives",
             "amount": 1,
             "price" : 40
         }

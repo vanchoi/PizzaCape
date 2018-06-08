@@ -49,3 +49,7 @@ button{
     margin: 30px;
 }
 
+button:hover {
+    opacity:1;
+  }
+
