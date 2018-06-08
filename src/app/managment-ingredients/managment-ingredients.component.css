@@ -1,48 +1,22 @@
 
-
-#inputName{
-    margin-left: 50px;
-}
-
-#inputDescription{
-    margin-left: 15px;
-}
-
-#inputQuantity{
-    margin-left: 35px;
-}
-
-#inputPrice{
-    margin-left: 57px;
-}
-
-
-
-
-div.row{
-  
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 50px;
-    margin-top: 30px;
-}
-.line2{
-    background-color:#2d3d4d;
-}
-
-
-h2{
-    text-align: center;
-    text-decoration-line: underline;
+label{
+    margin-right: 5%;  
 }
 
 .colRight{
-    
+    margin-top: 50px;
+    width: 40%;
+    display: inline-block;
+    margin-left: 3%;
+    margin-right: 6%;
     text-align: center;
-
+    font-size: 1.3em; 
+    position: absolute;
 }
 
-
+h3 p{
+    text-align: left;
+}
 
 .line2{
     background-color: rgba(78, 76, 65, 0.3);
@@ -82,17 +56,8 @@ ol li .btnMinus{
     font-size: 17px;
     font-weight: normal;
     margin:0px 15px 0px 25px;
+    color: white;
 }
-
-ol li .btnPlus{
-    background: #4CAF50;
-    border-radius: 1.1em;
-    font-size:17px;
-    font-weight: 500;
-    margin:0px 0px 0px 15px;
-}
-
-
 
 button{
     background: #4CAF50;
@@ -100,6 +65,10 @@ button{
     font-size:17px;
     font-weight: 500;
     padding: 8px;
+}
+
+.container{
+    background-color: rgba(185, 181, 154,0.9);    
 }
 
 
