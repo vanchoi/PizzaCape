@@ -68,7 +68,9 @@ button{
 }
 
 .container{
-    background-color: rgba(185, 181, 154,0.9);    
+    background-color: rgba(185, 181, 154,0.9);  
+    width: 90%;  
+    margin-left: 2%;
 }
 
 
