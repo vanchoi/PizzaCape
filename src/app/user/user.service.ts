@@ -6,8 +6,9 @@ import { Router } from '@angular/router';
 
 @Injectable()
 export class UserService {
-    private registerUrl = 'http://localhost:7000/api/users';
+    private registerUrl = 'http://localhost:7000/api/user';
     private loginUrl = 'http://localhost:7000/api/authenticate';
+    private username = localStorage.getItem('username');
 
     constructor(private http: HttpClient, private router: Router) {
     }
@@ -19,9 +20,15 @@ export class UserService {
         return this.http.post<any>(this.loginUrl, user);
     }
 
+
+
     loggedIn() {
         return !!localStorage.getItem('x-access-token');
     }
+    loggedAdmin() {
+        if (this.username !== null && this.username === 'admin') {
 
-
+        return true;
+    }
+}
 }

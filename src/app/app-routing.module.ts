@@ -12,6 +12,7 @@ import { ManagmentComponent } from './managment/managment.component';
 import { ManagmentIngredientsComponent } from './managment-ingredients/managment-ingredients.component';
 import { UserGuard } from './user/user.guard';
 import { ManagmentUsersComponent } from './managment-users/managment-users.component';
+import { AdminGuard } from './managment/admin.guard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -21,9 +22,9 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'about', component: AboutComponent },
   { path: 'cart', component: CartComponent, canActivate: [UserGuard] },
-  { path: 'admin', component: ManagmentComponent, },
-  { path: 'managment-ingredients', component: ManagmentIngredientsComponent },
-  { path: 'managment-users', component: ManagmentUsersComponent }
+  { path: 'managment-users', component: ManagmentUsersComponent },
+  { path: 'admin', component: ManagmentComponent, canActivate: [AdminGuard] },
+  { path: 'managment-ingredients', component: ManagmentIngredientsComponent }
 ];
 
 @NgModule({
