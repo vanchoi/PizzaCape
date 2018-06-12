@@ -1,54 +1,82 @@
-body{
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-ul{
-    list-style-type: none;
-    padding-left: 950px;
-    padding-top: 25px;
-}
-
-ul li{
-    display: inline;
-    margin-right: 20px;
-}
-
-ul li a{
-    font-size: 1.5em;
-}
-
-a{
-    color: black;
-    text-decoration: none;
-}
-
-#home-buttons{
-    margin-left: 380px;
-    margin-top: 300px;
-}
-
-#logo{
-    margin-left: 20px;
-    position: absolute;
-}
-
-#cart{
-    position: absolute;
-    padding-left: 1230px;
-    margin-top: -65px;
-    width: 5px;
-    height: 1px;
-}
-
-button{
-    background-color: #2581bc;
-    padding: 20px;
+/* #close{
     color: white;
-    border-radius: 10px;
+    background-color: #2581bc;
+    margin-left: 1250px;
+    margin-top: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    position: fixed;
+}
+#capricciosa{
+    border-style: solid;
+    padding: 15px;
+    margin-left: 50px;
+    margin-top: 20px;
+    position: fixed;
     width: 250px;
-    margin: 30px;
+    height: 450px;
 }
 
+#margherita{
+    border-style: solid;
+    padding: 15px;
+    margin-left: 360px;
+    margin-top: 20px;
+    position: fixed;
+    width: 250px;
+    height: 450px;
+}
+
+#supreme{
+    border-style: solid;
+    padding: 15px;
+    margin-left: 670px;
+    margin-top: 20px;
+    position: fixed;
+    width: 250px;
+    height: 450px;
+}
+
+#quattro{
+    border-style: solid;
+    padding: 15px;
+    margin-left: 980px;
+    margin-top: 20px;
+    position: fixed;
+    width: 250px;
+    height: 450px;
+}
+
+.inputbutton{
+    margin-left: 70px;
+    margin-top: 16px;
+}
+
+.inputbutton2{
+    margin-left: 20px;
+    margin-top: 16px;
+}
+
+label{
+    position: absolute;
+}
+
+.buttons{
+    margin-left: 30px;
+    margin-top: 10px;
+}
+#btnAddToCart{
+    margin-right: 10px;
+}
+
+#btnEditPizza{
+    margin-left: 10px;
+}
+
+form{
+    background-color: wheat;
+}
+ */
 
 
-
+ 

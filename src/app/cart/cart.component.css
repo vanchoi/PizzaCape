@@ -1,0 +1,11 @@
+ol li{
+    border: solid;
+    border-radius: 4px;
+    border-color:rgba(78, 76, 65, 0.3);
+    
+}
+
+ol{
+    background-color: rgba(185, 181, 154,0.9);
+    list-style: none;
+}
