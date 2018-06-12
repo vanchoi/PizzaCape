@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import {ICart} from "./cart.model";
+import {Pizza} from "../shared/pizza.model";
 
 
 @Injectable({
@@ -12,27 +14,36 @@ export class CartService {
   constructor() { }
 
   getCart() {
-    //let cartValue = sessionStorage.getItem( "newItem" );
-    //this.shoppingCart = JSON.parse( cartValue );
+    let cartValue = localStorage.getItem( "newItem" );
+    this.shoppingCart = JSON.parse( cartValue );
     return this.shoppingCart;
   }
 
-  addToCart(item) {
-    if(this.shoppingCart.length == 0) {
-      this.prependItemToCart(item);
+  addToCart(item: Pizza) {
+    let shoppingCart: ICart;
+    if (window.localStorage && window.localStorage.shoppingCart) {
+      shoppingCart = JSON.parse( window.localStorage.shoppingCart );
     } else {
-      let itemExists = this.checkItemExists(item);
-      if(itemExists) {
-        for(let a = 0; a < this.shoppingCart.length; a++) {
-          if(this.shoppingCart[a].name == item.name) {
-            this.shoppingCart[a].quantity += 1;
-            this.shoppingCart[a].total += item.price;
-          }
-        }
-      } else {
-        this.prependItemToCart(item);
-      }
+      shoppingCart = { items: [], total: 0 };
     }
+    shoppingCart.items.push(item);
+    shoppingCart.total+= item.price;
+    window.localStorage.shoppingCart = JSON.stringify(shoppingCart);
+    // if(this.shoppingCart.length == 0) {
+    //   this.prependItemToCart(item);
+    // } else {
+    //   let itemExists = this.checkItemExists(item);
+    //   if(itemExists) {
+    //     for(let a = 0; a < this.shoppingCart.length; a++) {
+    //       if(this.shoppingCart[a].name == item.name) {
+    //         this.shoppingCart[a].quantity += 1;
+    //         this.shoppingCart[a].total += item.price;
+    //       }
+    //     }
+    //   } else {
+    //     this.prependItemToCart(item);
+    //   }
+    // }
   }
 
   checkItemExists(item) {
@@ -45,18 +56,7 @@ export class CartService {
     }
   }
 
-  prependItemToCart(item) {
-    let newItem = {
-      name: item.name,
-      quantity: item.amount,
-      ingredients: item.items,
-      total: item.price
-    }
-    let jsonStr = JSON.stringify(newItem);
-    localStorage.setItem( "newItem", jsonStr );
 
-    this.shoppingCart.unshift(newItem);
-  }
 
   removeItemFromCart(item) {
     for(let index = 0; index < this.shoppingCart.length; index++) {
@@ -64,7 +64,7 @@ export class CartService {
       if(cartItem.name == item.name) {
         if(cartItem.quantity > 1) {
           cartItem.quantity -= 1;
-          cartItem.total -= item.prce;
+          cartItem.total -= item.price;
         } else {
           this.shoppingCart.splice(index, 1);
         }
@@ -73,7 +73,7 @@ export class CartService {
   }
 
   emptyCart() {
-    this.shoppingCart = [];
+    this.shoppingCart.items = [];
   }
 
 
