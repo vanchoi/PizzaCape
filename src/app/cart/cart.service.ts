@@ -6,12 +6,14 @@ import { Injectable } from '@angular/core';
 })
 
 export class CartService {
-  shoppingCart: any = [];
+  shoppingCart: any = [     ];
   cartView: any = [];
 
   constructor() { }
 
   getCart() {
+    //let cartValue = sessionStorage.getItem( "newItem" );
+    //this.shoppingCart = JSON.parse( cartValue );
     return this.shoppingCart;
   }
 
@@ -46,9 +48,12 @@ export class CartService {
   prependItemToCart(item) {
     let newItem = {
       name: item.name,
-      quantity: 1,
+      quantity: item.amount,
+      ingredients: item.items,
       total: item.price
     }
+    let jsonStr = JSON.stringify(newItem);
+    localStorage.setItem( "newItem", jsonStr );
 
     this.shoppingCart.unshift(newItem);
   }
