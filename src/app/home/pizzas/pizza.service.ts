@@ -8,7 +8,7 @@ import { Pizza } from '../../shared/pizza.model';
 })
 export class PizzaService {
 
-  private pizzaurl: string="../../assets/data/pizzas.json";
+  private pizzaurl: string='http://localhost:7000/pizzaApi/pizzaList';
 
   constructor(private http: HttpClient) { }
 

@@ -12,7 +12,6 @@ export class HomeComponent implements OnInit {
   totalPrice = 0;
   pizzaPrice = 0;
   quantity = 1;
-  quantityCapricciosa = 1;
 
   onPriceChange(total) {
     this.pizzaPrice = total;

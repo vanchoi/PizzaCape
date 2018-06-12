@@ -23,18 +23,7 @@ export class IngredientsComponent implements OnInit {
         });
     }
 
-    // ingredients: Ingredient[] = [
-    //     new Ingredient('Tomato Sauce', 1, 0 ),
-    //     new Ingredient('Fresh Tomato', 2, 0 ),
-    //     new Ingredient('Fresh Peppers', 3, 0 ),
-    //     new Ingredient('Olives', 1, 0 ),
-    //     new Ingredient('Mushrooms', 2, 0 ),
-    //     new Ingredient('Feta Cheese', 3, 0 ),
-    //     new Ingredient('Mozzarella', 2, 0 ),
-    //     new Ingredient('Smoked Ham', 2, 0 ),
-    //     new Ingredient('Bacon', 2, 0 ),
-    //     new Ingredient('Oregano', 1, 0 )
-    // ];
+
 
     sumAllIngredients() {
         let total = 0;

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Pizza } from '../../shared/pizza.model';
 import { PizzaService } from './pizza.service';
+import { CartService } from "../../cart/cart.service";
 
 @Component({
   selector: 'app-pizzas',
@@ -11,7 +12,7 @@ export class PizzasComponent implements OnInit {
 
   public pizzas = [];
 
-  constructor(private pizzaService: PizzaService) { }
+  constructor(private pizzaService: PizzaService, private cartService: CartService) { }
 
   ngOnInit() {
     this.pizzaService.getPizzas()
@@ -24,22 +25,14 @@ export class PizzasComponent implements OnInit {
     this.onSizeChange('M');
   }
 
-  // tslint:disable-next-line:member-ordering
   sizeM = 10;
-  // tslint:disable-next-line:member-ordering
   sizeL = 20;
-  // tslint:disable-next-line:member-ordering
   sizePrice: number = this.sizeM;
-  // tslint:disable-next-line:member-ordering
   totalPrice = 0;
-  // tslint:disable-next-line:member-ordering
   pizzaPrice = 0;
-  // tslint:disable-next-line:member-ordering
   quantity = 1;
-  // tslint:disable-next-line:member-ordering
-  quantityCapricciosa = 1;
 
-  onPriceChange(total) {
+  onPriceChange(total){
     this.pizzaPrice = total;
     this.totalPrice = this.pizzaPrice + this.sizePrice;
   }
@@ -51,6 +44,10 @@ export class PizzasComponent implements OnInit {
       this.sizePrice = this.sizeL;
     }
     this.totalPrice = this.pizzaPrice + this.sizePrice;
+  }
+  addToCart() {
+    this.cartService.addToCart(this.pizzas);
+    alert("Successfully added");
   }
 
 

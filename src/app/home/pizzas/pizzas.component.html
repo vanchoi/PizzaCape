@@ -20,7 +20,7 @@
     <p><b>Price: {{((totalPrice+pizza.price) * quantity)}}</b></p>
   </div>
   <div class="buttons">
-    <button id="btnAddToCart">Add to Cart</button>
+    <button id="btnAddToCart" (click)="addToCart()">Add to Cart</button>
     <!-- <button id="btnEditPizza">Edit Pizza</button> -->
   </div>
 </form>
