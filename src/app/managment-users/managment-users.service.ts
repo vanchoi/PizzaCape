@@ -9,8 +9,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ManageUsersService {
-    // private getUsersUrl = 'http://localhost:7000/api/management/users';
-    private getUsersUrl: string="../../assets/data/users.json";
+    private getUsersUrl = 'http://localhost:7000/api/allUsers';
+    // private getUsersUrl: string="../../assets/data/users.json";
     private deleteUserUrl = 'http://localhost:7000/api/management/:id';
 
   constructor(private http: HttpClient) { }
