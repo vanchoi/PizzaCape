@@ -35,6 +35,7 @@ import { HomeService } from './home/home.service';
 import { ManageIngredientsService } from './managment-ingredients/manage-ingredients.service';
 import { UserGuard } from './user/user.guard';
 import { NavbarAdminComponent } from './navbar-admin/navbar-admin.component';
+import {CartService} from "./cart/cart.service";
 
 
 
@@ -72,6 +73,7 @@ import { NavbarAdminComponent } from './navbar-admin/navbar-admin.component';
     UserService,
     HomeService,
     ManageIngredientsService,
+    CartService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptor,
