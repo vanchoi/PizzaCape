@@ -2,7 +2,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { AppRoutingModule } from './/app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptor } from './token.interceptor';
@@ -23,7 +23,7 @@ import { ProductsListComponent } from './products-list/products-list.component';
 import { ProductsEditComponent } from './products-list/products-edit/products-edit.component';
 import { ManagmentComponent } from './managment/managment.component';
 import { ManagmentIngredientsComponent } from './managment-ingredients/managment-ingredients.component';
-import { PizzasComponent } from './home/pizzas/pizzas.component';
+import { PizzaComponent } from './home/pizza/pizza.component';
 import { ManagmentUsersComponent } from './managment-users/managment-users.component';
 
 
@@ -31,7 +31,7 @@ import { ManagmentUsersComponent } from './managment-users/managment-users.compo
 // Services
 import { IngredientsService } from './ingredients.service';
 import { UserService } from './user/user.service';
-import { PizzaService } from './home/pizzas/pizza.service';
+import { HomeService } from './home/home.service';
 import { ManageIngredientsService } from './managment-ingredients/manage-ingredients.service';
 import { UserGuard } from './user/user.guard';
 import { NavbarAdminComponent } from './navbar-admin/navbar-admin.component';
@@ -56,7 +56,7 @@ import { NavbarAdminComponent } from './navbar-admin/navbar-admin.component';
     ProductsEditComponent,
     ManagmentComponent,
     ManagmentIngredientsComponent,
-    PizzasComponent,
+    PizzaComponent,
     ManagmentUsersComponent,
     NavbarAdminComponent
 
@@ -70,7 +70,7 @@ import { NavbarAdminComponent } from './navbar-admin/navbar-admin.component';
   providers: [
     IngredientsService,
     UserService,
-    PizzaService,
+    HomeService,
     ManageIngredientsService,
     {
       provide: HTTP_INTERCEPTORS,
