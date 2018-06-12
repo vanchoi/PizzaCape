@@ -22,6 +22,10 @@ export class ManagmentUsersComponent implements OnInit {
         });
   }
 
+  deleteLine(){
+      
+  }
+
   removeUser(user: User) {
     this.manageUsers.deleteUser(this.user)
     .subscribe(

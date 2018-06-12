@@ -9,9 +9,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ManageIngredientsService {
-  private addIngredientUrl = 'http://localhost:7000/ingredientsapi/ingredient';
-  private getIngredientsUrl = 'http://localhost:7000/ingredientsapi/ingredients';
-  private deleteIngredientUrl = 'http://localhost:7000/ingredientsapi/deleteIngredient/name';
+  private addIngredientUrl = 'http://localhost:7000/ingredientsApi/ingredient';
+  private getIngredientsUrl = 'http://localhost:7000/ingredientsApi/ingredients';
+  private deleteIngredientUrl = 'http://localhost:7000/ingredientsApi/deleteIngredient/name';
 
   constructor(private http: HttpClient) { }
 

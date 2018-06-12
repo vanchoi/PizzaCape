@@ -10,7 +10,8 @@ import { Order } from '../shared/order.model';
 
 export class OrderService {
 
-private orderurl: "http://localhost:7000/order/dashbord";
+//private orderurl: "http://localhost:7000/order/dashbord";
+private orderurl: string="../../assets/data/cart.json"; 
   
 
   constructor(private http: HttpClient) { }
