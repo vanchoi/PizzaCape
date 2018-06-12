@@ -16,27 +16,27 @@ export class ListUserComponent implements OnInit {
   ngOnInit() {
     // this.userService.getUsers().subscribe(data => { this.users = data; });
 
-      this.userService.getUsers()
-      .subscribe((users: User[]) => {
-          users.forEach(ingredient => {
-              this.users.push(new User());
-          });
-      });
+      // this.userService.getUsers()
+      // .subscribe((users: User[]) => {
+      //     users.forEach(ingredient => {
+      //         this.users.push(new User());
+      //     });
+      // });
   }
 
 
 
-  deleteUser(user: User): void {
-    this.userService.deleteUser(user.id).subscribe(data => { this.users = this.users.filter(u => u !== user); });
-  }
+  // deleteUser(user: User): void {
+  //   this.userService.deleteUser(user.id).subscribe(data => { this.users = this.users.filter(u => u !== user); });
+  // }
 
-  editUser(user: User): void {
-    localStorage.removeItem('editUserId');
-    localStorage.setItem('editUserId', user.id.toString());
-    this.router.navigate(['edit-user']);
-  }
-  addUser(): void {
-    this.router.navigate(['add-user']);
-  }
+  // editUser(user: User): void {
+  //   localStorage.removeItem('editUserId');
+  //   localStorage.setItem('editUserId', user.id.toString());
+  //   this.router.navigate(['edit-user']);
+  // }
+  // addUser(): void {
+  //   this.router.navigate(['add-user']);
+  // }
 
 }

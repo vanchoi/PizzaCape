@@ -1,5 +1,6 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './/app-routing.module';
 
@@ -9,7 +10,6 @@ import { PaymentinfoComponent } from './paymentinfo/paymentinfo.component';
 import { YoumadeComponent } from './youmade/youmade.component';
 import { HomeComponent } from './home/home.component';
 import { AuthenticationService } from './user/service/auth.service';
-import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './user/login/login.component';
 import { OurmenuComponent } from './ourmenu/ourmenu.component';
 import { AddUserComponent } from './user/add-user/add-user.component';
@@ -36,9 +36,9 @@ import { UserService } from './user/service/user.service';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
-    ReactiveFormsModule,
-    HttpClientModule
+    ReactiveFormsModule
   ],
   providers: [AuthenticationService, UserService],
   bootstrap: [AppComponent]

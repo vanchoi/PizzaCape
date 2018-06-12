@@ -15,9 +15,13 @@
 // ];
 
 export class User {
-    id: number;
     name: string;
     username: string;
     email: string;
     password: string;
+
+    constructor(values: Object = {}) {
+        // Constructor initialization
+        Object.assign(this, values);
+}
 }
