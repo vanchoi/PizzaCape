@@ -7,7 +7,7 @@ form{
     min-width: 250px;
     display: inline-block;
     background-color: rgba(185, 181, 154,0.9);
-    
+
     align-items: center;
     font-size: 1em;
 }
@@ -27,16 +27,16 @@ h1{
     position: inherit
 }
 
-p{
-    text-align: justify;
-    height: 10px;
-    margin-bottom: 10%;
-    
-}
+/*p{*/
+    /*text-align: justify;*/
+    /*height: 10px;*/
+    /*margin-bottom: 10%;*/
+    /**/
+/*}*/
 
-label{
-    position: absolute;
-}
+/*label{*/
+    /*position: absolute;*/
+/*}*/
 
 button {
     background-color: #4CAF50;
@@ -50,7 +50,7 @@ button {
     margin-left: 15%;
     text-align: center;
   }
-  
+
   button:hover {
     opacity:1;
   }
