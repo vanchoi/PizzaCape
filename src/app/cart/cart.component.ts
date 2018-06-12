@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CartService } from './cart.service';
+
 
 
 @Component({
@@ -7,12 +9,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
+  shoppingCart: any = [];
+  cartService;
+  total: number = 0;
+
+  static get parameters() {
+    return [CartService];
+  }
+
+  constructor(cartService) {
+    this.cartService = cartService;
+  }
 
 
-
-  constructor() { }
 
   ngOnInit() {
+    this.shoppingCart = this.cartService.getCart();
+    for(let a = 0; a < this.shoppingCart.length; a++) {
+      this.total += this.shoppingCart[a].price;
+    }
+  }
+  emptyCart() {
+    this.cartService.emptyCart();
+    this.shoppingCart = [];
   }
 
 }

@@ -1,4 +1,4 @@
-export class Order {
+export class Cart {
     public name: string;
     public description: string;
     public quantity: number;

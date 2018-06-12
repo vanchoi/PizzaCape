@@ -1,4 +1,4 @@
-export interface IIngredients {
+export interface Ingredients {
     name: string;
     singlePrice: number;
     amount: number;
