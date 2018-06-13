@@ -14,37 +14,47 @@ export class YoumadeComponent implements OnInit {
   @Input()
   detail: Pizza;
 
-  initialPrice: number;
+  initialPrice = 5;
   sizeFactor = 1.25;
-  totalPrice = 0;
   ingredientsPrice = 0;
-  quantity = 1;
 
   ngOnInit() {
+    this.detail = Object.assign({}, this.detail, {
+      price: this.initialPrice,
+      size: 'M',
+      amount: 1,
+      name: 'Custom Pizza'
+    });
+  }
+
+
+
+  constructor( private cartService: CartService ) {}
+
+  onChange(){
+    this.detail.price = (this.initialPrice + this.ingredientsPrice) * this.detail.amount;
+
+    if (this.detail.size === 'L') {
+      this.detail.price *= this.sizeFactor;
+    }
     this.detail = Object.assign({}, this.detail);
-    this.detail.amount = 1;
-    this.initialPrice = this.detail.price;
+  }
+
+  onSizeChange(size: string) {
+    this.detail.size = size;
+    this.onChange();
+  }
+
+  onAmountChange(value:number) {
+    this.detail.amount = value;
+    this.onChange();
   }
 
   onPriceChange(total) {
     this.ingredientsPrice = total;
-    this.detail.price = this.ingredientsPrice;
+    this.onChange();
   }
 
-  constructor( private cartService: CartService ) {
-
-    }
-
-
-
-  onSizeChange(size: string) {
-    this.detail.size = size;
-    this.detail.price = this.initialPrice * this.detail.amount;
-
-    if (size === 'L') {
-      this.detail.price *= this.sizeFactor;
-    }
-  }
   addToCart() {
     this.cartService.addToCart(this.detail);
     alert("Successfully added");

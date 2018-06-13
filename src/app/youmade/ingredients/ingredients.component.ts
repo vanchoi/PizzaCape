@@ -9,7 +9,8 @@ import { IngredientsService } from '../../ingredients.service';
 })
 export class IngredientsComponent implements OnInit {
     public ingredients = [];
-    @Output() _price = new EventEmitter<number>();
+    @Output()
+    _price = new EventEmitter<number>();
 
     constructor(private _ingredientService: IngredientsService) {
     }

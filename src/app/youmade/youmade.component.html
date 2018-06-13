@@ -9,24 +9,23 @@
 
           <div class="pizzaSize">
             Size:
-            <input type="radio" name="size" checked (click)="onSizeChange('M')" />M
-            <input type="radio" name="size" (click)="onSizeChange('L')" />L
+            <input type="radio" name="size" [ngModel]="detail?.size" [value]="'M'" (click)="onSizeChange('M')" />M
+            <input type="radio" name="size" [ngModel]="detail?.size" [value]="'L'" (click)="onSizeChange('L')" />L
             <!-- Quantity:
         <input type="number" min="1" max="10" value="1" />  -->
           </div>
 
           <div class="pizzaQuantity">
             Quantity:
-            <input type="number" min="1" max="10" value="1" id="quantity" [(ngModel)]="quantity" />
+            <input type="number" min="1" max="10" name="amount" id="amount" [ngModel]="detail?.amount" (change)="onAmountChange($event.target.value)"  />
           </div>
 
           <div class="price">
-            Price: {{(detail?.price * quantity)}}
+            Price: {{detail?.price}}
           </div>
-          <button class="addCart" (click)=" addToCart()"> Add to Cart </button>
+          <button class="addCart" (click)=" addToCart()" [disabled]="ingredientsPrice===0"> Add to Cart </button>
+        </div>
       </div>
-
-
     </div>
   </div>
 
