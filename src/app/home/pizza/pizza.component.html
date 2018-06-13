@@ -21,7 +21,7 @@
     <b>Price: {{detail?.price}}</b>
   </p>
   <div class="buttons">
-    <button type="submit" id="btnAddToCart">Add to Cart</button>
+    <button type="submit" id="btnAddToCart" (click)="addToCart(this.item)">Add to Cart</button>
     <!-- <button id="btnEditPizza">Edit Pizza</button> -->
   </div>
 </form>

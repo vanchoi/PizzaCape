@@ -5,6 +5,9 @@
 
 body{
     background-color: rgba(185, 181, 154,0.7);
+    min-height: 900px;
+    min-width: 1000px;
+    
 }
 .colLeft{
     width: 40%;
@@ -19,6 +22,8 @@ body{
     min-width: 400px;
     margin-bottom: 50px;
     margin-top: 50px;
+    height: 700px;
+    
 } 
 h2{
     margin: auto;
@@ -26,15 +31,15 @@ h2{
 }
 
 .colRight{
-    margin-top: 50px;
+    
     width: 40%;
     display: inline-block;
-    margin-left: 3%;
+    margin-left: 50%;
     margin-right: 6%;
     text-align: center;
     font-size: 1.3em; 
     position: absolute;
-}
+}   
 
 
 li{
@@ -42,9 +47,11 @@ li{
 }
 
 #youmadePizza{
+    margin-top: -30%;
     width: 100%;
     height: 50%;
-    max-height: 1000px;
+    max-height: 500px;
+    min-height: 0px;
 }
 
 

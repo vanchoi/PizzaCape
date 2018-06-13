@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Pizza} from '../../shared/pizza.model';
+import {CartService} from "../../cart/cart.service";
 
 @Component({
   selector: 'app-pizza',
@@ -13,7 +14,14 @@ export class PizzaComponent implements OnInit {
   initialPrice: number;
   sizeFactor = 1.25;
 
-  constructor() {
+  // pizza = {
+  //   name: this.detail.name,
+  //   quantity: this.detail.amount,
+  //   price: this.detail.price
+  // };
+
+
+  constructor( private cartService: CartService) {
   }
 
   ngOnInit() {
@@ -39,4 +47,9 @@ export class PizzaComponent implements OnInit {
       this.detail.price *= this.sizeFactor;
     }
   }
+  addToCart() {
+    this.cartService.addToCart(this.detail);
+    alert("Successfully added");
+  }
+
 }

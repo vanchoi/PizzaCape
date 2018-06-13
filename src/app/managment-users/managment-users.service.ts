@@ -22,4 +22,8 @@ export class ManageUsersService {
   deleteUser(user) {
     return this.http.delete<any>(this.deleteUserUrl, user);
     }
+
+    removeUser(number) {
+      
+    }
 }
