@@ -29,5 +29,4 @@ export class ManagmentUsersComponent implements OnInit {
       err => console.log(err)
     );
   }
-
 }

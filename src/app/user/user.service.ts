@@ -26,7 +26,7 @@ export class UserService {
         return !!localStorage.getItem('x-access-token');
     }
     loggedAdmin() {
-        if (this.username !== null && this.username === 'admin') {
+        if (this.username === 'admin') {
 
         return true;
     }
