@@ -28,14 +28,6 @@ export class CartComponent implements OnInit {
     }
   }
 
-//   let cartItem = this.shoppingCart[index];
-//   if(cartItem.name == item.name) {
-//   if(cartItem.quantity > 1) {
-//   cartItem.quantity -= 1;
-//   cartItem.total -= item.price;
-// } else {
-//   this.shoppingCart.splice(index, 1);
-
   removeItemFromCart(removeIndex: number){
 
     this.shoppingCart.items = this.shoppingCart.items
@@ -50,6 +42,18 @@ export class CartComponent implements OnInit {
       total: 0
     };
     delete window.localStorage.shoppingCart;
+  }
+  checkout() {
+    this.cartService.checkout(this.shoppingCart)
+      .subscribe(
+        (res) => {
+          console.log(res);
+          this.emptyCart();
+        },
+        (err) => {
+          console.log(err);
+        }
+      );
   }
 
 }

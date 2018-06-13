@@ -2,13 +2,11 @@
   <div class="container">
     <div class="row">
       <div class="colLeft">
-        <app-ingredients (_price)="onPriceChange($event)"></app-ingredients>
-        
+        <app-ingredients (_price)="onPriceChange($event)"></app-ingredients>        
       </div>
-        
       <div class="colRight">
           <img src="../../assets/images/supreme.jpg" width="800%" id="youmadePizza">
-  
+
           <div class="pizzaSize">
             Size:
             <input type="radio" name="size" checked (click)="onSizeChange('M')" />M
@@ -16,27 +14,23 @@
             <!-- Quantity:
         <input type="number" min="1" max="10" value="1" />  -->
           </div>
-  
+
           <div class="pizzaQuantity">
             Quantity:
             <input type="number" min="1" max="10" value="1" id="quantity" [(ngModel)]="quantity" />
           </div>
-  
+
           <div class="price">
-            Price: {{(totalPrice * quantity)}}
+            Price: {{(detail?.price * quantity)}}
           </div>
-  
-          <button class="addCart"> Add to Cart </button>
-  
-          
-        
+          <button class="addCart" (click)=" addToCart()"> Add to Cart </button>
       </div>
 
 
     </div>
   </div>
- 
-</body> 
+
+</body>
 
 <div>
     <app-home></app-home>
