@@ -5,11 +5,13 @@
   <table class="table table-bordered" *ngIf="shoppingCart.items.length > 0">
     <tr>
       <th>Item</th>
+      <th>Size</th>
       <th>Quantity</th>
       <th>Price</th>
     </tr>
     <tr *ngFor="let item of shoppingCart.items; let i = index;">
       <td>{{ item.name }}</td>
+      <td>{{ item.size }}</td>
       <td>{{ item.amount }}</td>
       <!--<td>{{ item.items[name] }}</td>-->
       <td>{{ item.price}}</td>
