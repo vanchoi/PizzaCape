@@ -25,7 +25,7 @@ import { ManagmentComponent } from './managment/managment.component';
 import { ManagmentIngredientsComponent } from './managment-ingredients/managment-ingredients.component';
 import { PizzaComponent } from './home/pizza/pizza.component';
 import { ManagmentUsersComponent } from './managment-users/managment-users.component';
-
+import { ManagmentOrdersComponent } from './managment-orders/managment-orders.component';
 
 
 // Services
@@ -36,6 +36,7 @@ import { ManageIngredientsService } from './managment-ingredients/manage-ingredi
 import { UserGuard } from './user/user.guard';
 import { NavbarAdminComponent } from './navbar-admin/navbar-admin.component';
 import {CartService} from "./cart/cart.service";
+
 
 
 
@@ -59,7 +60,8 @@ import {CartService} from "./cart/cart.service";
     ManagmentIngredientsComponent,
     PizzaComponent,
     ManagmentUsersComponent,
-    NavbarAdminComponent
+    NavbarAdminComponent,
+    ManagmentOrdersComponent
 
   ],
   imports: [
