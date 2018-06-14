@@ -16,7 +16,7 @@ import { AdminGuard } from './managment/admin.guard';
 import { ManagmentOrdersComponent } from './managment-orders/managment-orders.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'custom', component: YoumadeComponent },
   { path: 'signup', component: SignUpComponent },
@@ -24,9 +24,13 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'cart', component: CartComponent, canActivate: [UserGuard] },
   { path: 'managment-users', component: ManagmentUsersComponent },
-  { path: 'admin', component: ManagmentComponent, canActivate: [AdminGuard] },
-  { path: 'managment-ingredients', component: ManagmentIngredientsComponent },
-  { path: 'managment-orders', component: ManagmentOrdersComponent }
+
+
+  { path: 'managment-orders', component: ManagmentOrdersComponent },
+
+  { path: 'admin', component: ManagmentComponent, canActivate: [AdminGuard],  pathMatch: 'full' },
+  { path: 'managment-ingredients', component: ManagmentIngredientsComponent }
+
 ];
 
 @NgModule({
