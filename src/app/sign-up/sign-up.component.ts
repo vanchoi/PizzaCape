@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../user/user.model';
 import { UserService } from '../user/user.service';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -12,7 +12,7 @@ export class SignUpComponent implements OnInit {
 
   model = {};
 
-  constructor(private _user: UserService) {
+  constructor(private _user: UserService, private router: Router) {
 
    }
 
@@ -28,7 +28,10 @@ export class SignUpComponent implements OnInit {
   registerUser() {
     this._user.registerUser(this.model)
       .subscribe(
-        res => console.log(res),
+        (res: any) => {
+          alert(res.message);
+          this.router.navigate(['']);
+        },
         err => console.log(err)
       );
   }
