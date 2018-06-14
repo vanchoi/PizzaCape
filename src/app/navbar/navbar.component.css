@@ -16,7 +16,7 @@ ul li:not(:last-child){
 }
 
 ul li a{
-    font-size: 23px;
+    font-size: 19px;
     font-weight: bold;
     font-style: oblique;
     color: black;

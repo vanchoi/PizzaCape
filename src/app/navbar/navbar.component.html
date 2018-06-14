@@ -16,14 +16,15 @@
         <a routerLink="/contact">Contact</a>
       </li>
       <li>
+        <a routerLink="/admin" *ngIf="loggedAdmin()">Admin</a>
+      </li>
+      <li>
         <a routerLink="/login" *ngIf="!loggedIn()">Login</a>
       </li>
       <li>
         <a routerLink="" *ngIf="loggedIn()" (click)='logOut()'>Logout</a>
       </li>
-      <li>
-        <a routerLink="/admin" *ngIf="loggedAdmin()">Admin</a>
-      </li>
+      
     </ul>
   </div>
   <div class="container hright">
