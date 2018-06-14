@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="colLeft">
-        <app-ingredients (_price)="onPriceChange($event)"></app-ingredients>        
+        <app-ingredients (_price)="onPriceChange($event)"></app-ingredients>
       </div>
       <div class="colRight">
           <img src="../../assets/images/supreme.jpg" width="800%" id="youmadePizza">
@@ -24,7 +24,7 @@
             Price: {{detail?.price}}
           </div>
           <button class="addCart" (click)=" addToCart()" [disabled]="ingredientsPrice===0"> Add to Cart </button>
-        </div>
+
       </div>
     </div>
   </div>
