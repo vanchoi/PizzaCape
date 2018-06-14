@@ -1,8 +1,7 @@
 .containerLeft{
-    width: 40%;
+    width: 70%;
     display: inline-block;
-    margin-left: 3%;
-    margin-right: 5%;
+    margin: auto;
     color: White;
     font-size: 1.3em;
     border-radius: 4px;
