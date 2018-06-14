@@ -19,7 +19,7 @@ export class SignUpComponent implements OnInit {
   ngOnInit() {
   }
 
-  // model : User = new User();
+
 
   onSubmit(registerForm) {
     // debugger;

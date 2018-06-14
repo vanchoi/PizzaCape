@@ -13,13 +13,12 @@
       <td>{{ item.name }}</td>
       <td>{{ item.size }}</td>
       <td>{{ item.amount }}</td>
-      <!--<td>{{ item.items[name] }}</td>-->
       <td>{{ item.price}}</td>
       <button id="deletebtn" (click)="removeItemFromCart(i)">x</button>
     </tr>
   </table>
   <h4 *ngIf="shoppingCart.items.length > 0">Total: {{ shoppingCart.total.toFixed(2) }}</h4>
-  <button class="btn">Checkout</button>
+  <button class="btn" (click)="checkout()">Checkout</button>
   <a (click)="emptyCart()">
     <button class="btn" type="submit">Clear Cart</button>
   </a>
