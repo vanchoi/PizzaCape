@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-navbar',
@@ -7,7 +8,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  constructor(private router: Router) {}
+  private username = localStorage.getItem('username');
+  constructor(private router: Router, private http: HttpClient) {}
 
   ngOnInit() {
   }
@@ -21,5 +23,12 @@ export class NavbarComponent implements OnInit {
     this.router.navigate(['']);
 }
 
+loggedAdmin() {
+  if (this.username !== null && this.username === 'admin') {
 
+  return true;
+}
+
+
+}
 }
